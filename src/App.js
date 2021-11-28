@@ -1,4 +1,13 @@
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { loadGames } from "./actions/gamesAction";
+
 function App() {
+  const dispach = useDispatch();
+  useEffect(() => {
+    dispach(loadGames());
+  });
+
   return (
     <div className="App">
       <h1>Hello Ignite</h1>
