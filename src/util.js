@@ -11,6 +11,7 @@
 // };
 
 export const smallImage = (imageUrl, size) => {
+  if (!imageUrl) return null;
   return imageUrl.match(/media\/(screenshots|games)/)
     ? imageUrl.replace("/media/", `/media/resize/${size}/-/`)
     : imageUrl;
